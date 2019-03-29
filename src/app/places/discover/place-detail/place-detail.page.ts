@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { NavController } from '@ionic/angular';
+import { NavController, ModalController } from '@ionic/angular';
 import { PlacesService } from 'src/app/services/places.service';
 import { Place } from '../../places.model';
+import { CreateBookingComponent } from '../../../bookings/create-booking/create-booking.component';
 
 @Component({
   selector: 'app-place-detail',
@@ -13,7 +14,12 @@ import { Place } from '../../places.model';
 export class PlaceDetailPage implements OnInit {
   place: Place;
 
-  constructor(private navCrtl: NavController, private route: ActivatedRoute, private placesService: PlacesService) { }
+  constructor(
+    private navCrtl: NavController,
+    private route: ActivatedRoute,
+    private placesService: PlacesService,
+    private modalCtrl: ModalController
+    ) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(paramMap => {
@@ -29,7 +35,12 @@ export class PlaceDetailPage implements OnInit {
 
   onBookPlace() {
     // this.router.navigate(['/places/tabs/discover']);
-    this.navCrtl.navigateBack('/places/tabs/discover');
+    // this.navCrtl.navigateBack('/places/tabs/discover');
+    this.modalCtrl.create({component: CreateBookingComponent})
+      .then(modalEl => {
+        modalEl.present();
+      }
+    );
   }
 
 }
