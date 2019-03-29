@@ -8,7 +8,7 @@ export class PlacesService {
   private _places: Place[] = [
     new Place('p1',
     'Manhattan Mansion',
-    'In the heart of New York City', 
+    'In the heart of New York City',
     'https://upload.wikimedia.org/wikipedia/commons/e/e8/Hamilton_MT_Daly_Mansion_2.jpg',
      499.99
     ),
@@ -27,6 +27,7 @@ export class PlacesService {
 
   ];
 
+  //  get acess from outside so using get
   get places() {
     return [...this._places];
   }
