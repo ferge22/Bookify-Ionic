@@ -32,4 +32,9 @@ export class PlacesService {
   }
 
   constructor() { }
+
+  getPlace(id: string) {
+    // find gets single place for mached place id we passed, ... spread operator to pull out mached id place to new Object
+    return {...this._places.find(p => p.id === id)};
+  }
 }
