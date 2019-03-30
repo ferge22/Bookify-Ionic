@@ -9,7 +9,7 @@
 
 <ion-content padding>
   <ion-segment (ionChange)="onFilterUpdate($event)">
-    <ion-segment-button value="all" cheked>All Places</ion-segment-button>
+    <ion-segment-button value="all" checked>All Places</ion-segment-button>
     <ion-segment-button value="bookable">Bookable Places</ion-segment-button>
   </ion-segment>
   <ion-grid>
@@ -26,7 +26,7 @@
           </ion-card-content>
           <div>
             <ion-button 
-            fill="clear" 
+            fill="clear"
             color="primary" 
             [routerLink]="['/', 'places', 'tabs', 'discover', loadedPlaces[0].id]"
             >
