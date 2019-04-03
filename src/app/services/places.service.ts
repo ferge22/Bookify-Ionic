@@ -10,20 +10,26 @@ export class PlacesService {
     'Manhattan Mansion',
     'In the heart of New York City',
     'https://upload.wikimedia.org/wikipedia/commons/e/e8/Hamilton_MT_Daly_Mansion_2.jpg',
-     499.99
+     499.99,
+     new Date('2019-04-04'),
+     new Date('2019-12-31')
     ),
      new Place('p2',
      'L\'Amour Toujours',
      'A romantic place in Paris',
      'https://s-ec.bstatic.com/images/hotel/max1024x768/120/120685028.jpg',
-      189.99
+      189.99,
+      new Date('2019-04-04'),
+      new Date('2019-12-31')
     ),
     new Place('p3',
     'The Foggy Palace',
     'Not your average city trip!',
     'https://c1.staticflickr.com/8/7149/6593601281_a6e79d1252_b.jpg',
-     99.99
-   ),
+     99.99,
+     new Date('2019-04-04'),
+     new Date('2019-12-31')
+   )
 
   ];
 
