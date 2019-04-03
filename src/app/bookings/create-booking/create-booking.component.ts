@@ -11,6 +11,7 @@ import { ModalController } from '@ionic/angular';
 export class CreateBookingComponent implements OnInit {
   @Input() selectedPlace: Place;
 
+
   constructor(private modalCtrl: ModalController) { }
 
   ngOnInit() {}
